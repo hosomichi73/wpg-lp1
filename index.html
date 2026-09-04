@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ただの"デザイン変更"で終わらせない ブランド再設計パートナー | WHITE.PHAT.GRAPHICS</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800;900&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --font-heading:'M PLUS Rounded 1c','Noto Sans JP',sans-serif;
+    --font-body:'Noto Sans JP','M PLUS Rounded 1c',sans-serif;
+  }
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-body);color:#212529;}
+  .heading-font{font-family:var(--font-heading);}
+
+  /* CTA pill button */
+  .btn-cta{
+    display:flex;align-items:center;justify-content:center;
+    background:#000;color:#fff;border-radius:9999px;
+    font-family:var(--font-heading);font-weight:700;
+    letter-spacing:0.05em;
+    transition:transform .2s ease, opacity .2s ease;
+  }
+  .btn-cta:hover{opacity:.85;transform:translateY(-2px);}
+  .btn-cta:active{opacity:.7;transform:translateY(0);}
+
+  /* Speech bubble with tail */
+  .bubble{position:relative;}
+  .bubble.tail-right::after,
+  .bubble.tail-right::before,
+  .bubble.tail-left::after,
+  .bubble.tail-left::before{
+    content:'';position:absolute;width:0;height:0;
+    border-style:solid;
+  }
+  .bubble.tail-right::after{
+    bottom:-20px;right:15%;
+    border-width:20px 16px 0 16px;
+    border-color:#000 transparent transparent transparent;
+  }
+  .bubble.tail-right::before{
+    bottom:-15px;right:calc(15% + 3px);
+    border-width:16px 13px 0 13px;
+    border-color:#fff transparent transparent transparent;
+    z-index:1;
+  }
+  .bubble.tail-left::after{
+    bottom:-20px;left:12%;
+    border-width:20px 16px 0 16px;
+    border-color:#000 transparent transparent transparent;
+  }
+  .bubble.tail-left::before{
+    bottom:-15px;left:calc(12% + 3px);
+    border-width:16px 13px 0 13px;
+    border-color:#fff transparent transparent transparent;
+    z-index:1;
+  }
+
+  /* Scroll fade-in */
+  [data-animate]{opacity:0;transform:translateY(24px);transition:opacity .6s ease, transform .6s ease;}
+  [data-animate].is-visible{opacity:1;transform:translateY(0);}
+
+  textarea{resize:vertical;}
+</style>
+</head>
+<body class="bg-white">
+
+<!-- ============ ① ヘッダー + ② ファーストビュー(FV) ============ -->
+<section class="relative overflow-hidden bg-white">
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('assets/WPG_LP_bg.jpg');"></div>
+  <div class="relative z-10">
+    <header class="max-w-[800px] mx-auto flex items-center justify-between px-5 md:px-10 py-4 md:py-6">
+      <p class="font-black text-xs md:text-sm tracking-wider heading-font">WHITE.PHAT.GRAPHICS</p>
+      <a href="#form" class="btn-cta text-[11px] md:text-sm px-4 py-2.5 md:px-6 md:py-3">無料で相談をする</a>
+    </header>
+
+    <div class="max-w-[760px] mx-auto px-5 md:px-10 pt-8 pb-14 md:pt-14 md:pb-20 text-center">
+      <h1 class="heading-font font-black text-[25px] md:text-[48px] leading-[1.3] tracking-[0.02em] md:tracking-[0.04em] mb-8 md:mb-12">
+        ただの&ldquo;デザイン変更&rdquo;<br>
+        で終わらせない<br>
+        ブランド再設計パートナー
+      </h1>
+      <a href="#form" class="btn-cta w-full max-w-[420px] mx-auto py-4 md:py-5 text-base md:text-lg">無料で相談をする</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ③ 課題提起 ============ -->
+<section class="bg-white px-5 md:px-10 py-14 md:py-20">
+  <div class="max-w-[720px] mx-auto">
+
+    <div class="bubble tail-right border-[3px] border-black rounded-2xl bg-white px-5 py-4 md:px-10 md:py-7 mb-16 md:mb-20 w-fit max-w-full mx-auto" data-animate>
+      <h2 class="heading-font font-black text-[18px] md:text-[32px] whitespace-nowrap">こんなお悩みありませんか？</h2>
+    </div>
+
+    <div class="flex items-start justify-between gap-4 md:gap-8 mb-10 md:mb-14" data-animate>
+      <ul class="font-bold text-[16px] md:text-xl leading-[1.8] space-y-1 flex-1">
+        <li>・デザインの方向性が社内でまとまらない</li>
+        <li>・新しいブランドが現場でうまく使われない</li>
+        <li>・部署ごとに資料の見た目がバラバラになる</li>
+        <li>・ブランドリニューアル後の運用が大変すぎる</li>
+        <li>・上司に説明しても「なんとなく」で判断されてしまう</li>
+      </ul>
+      <img src="assets/WPG_LP_azuma.png" alt="担当者イラスト" class="w-16 md:w-28 flex-shrink-0 mt-1">
+    </div>
+
+    <div class="text-center text-2xl md:text-3xl font-black mb-8 md:mb-10 leading-none" data-animate>▼</div>
+
+    <p class="heading-font text-center font-black text-[19px] md:text-[44px] leading-[1.4] tracking-[0.01em] md:tracking-[0.03em]" data-animate>
+      その原因は「デザイン」ではなく<br>「仕組み不足」でもあります。
+    </p>
+  </div>
+</section>
+
+<!-- ============ ④ 問題の本質・解決策 ============ -->
+<section class="bg-[#F0F0F0] px-5 md:px-10 py-14 md:py-20">
+  <div class="max-w-[720px] mx-auto text-center">
+    <h2 class="heading-font font-black text-[24px] md:text-[40px] leading-[1.4] tracking-[0.03em] mb-6 md:mb-8" data-animate>
+      &ldquo;作るだけ&rdquo;ではなく、<br>&ldquo;使われ続けるブランド設計&rdquo;
+    </h2>
+    <p class="font-bold text-[13px] md:text-[15px] leading-[1.7] mb-8 md:mb-10" data-animate>
+      ブランドリニューアルを見た目の変更で終わらせず、<br class="hidden md:block">
+      社内で使い続けられる仕組みまでを設計します。
+    </p>
+    <a href="#form" class="btn-cta w-full max-w-[420px] mx-auto py-4 md:py-5 text-base md:text-lg" data-animate>無料で相談をする</a>
+  </div>
+</section>
+
+<!-- ============ ⑤ 特徴・強み (4つのポイント) ============ -->
+<section class="bg-white px-5 md:px-10 py-14 md:py-20">
+  <div class="max-w-[720px] mx-auto">
+    <h2 class="heading-font font-black text-[24px] md:text-[40px] mb-8 md:mb-12 text-center md:text-left" data-animate>
+      弊社が考える4つのポイント
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+
+      <!-- Card 1 -->
+      <div class="border-2 border-black rounded-2xl p-6 md:p-8" data-animate>
+        <h3 class="heading-font font-black text-[19px] md:text-[23px] leading-[1.4] mb-4">
+          社内全体で<br>「納得して決められる」<br>状態をつくる
+        </h3>
+        <p class="font-bold text-[13px] md:text-[15px] leading-[1.6] mb-4">
+          デザインは&ldquo;好み&rdquo;ではなく<br>&ldquo;戦略&rdquo;で決めるべきです。
+        </p>
+        <ul class="text-[12px] md:text-[13px] font-bold leading-[1.7] mb-4 space-y-0.5">
+          <li>・競合比較ビジュアルマップ（違いを見える可）</li>
+          <li>・デザインの意味を説明する資料作成</li>
+          <li>・役員向けプレゼン資料（そのまま使える構成）</li>
+        </ul>
+        <p class="font-bold text-[13px] md:text-[15px] leading-[1.6]">
+          「なんとなくOK」を<br>「納得してOK」に変えるような<br>仕組みを作ります。
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="border-2 border-black rounded-2xl p-6 md:p-8" data-animate>
+        <h3 class="heading-font font-black text-[19px] md:text-[23px] leading-[1.4] mb-4">
+          誰でも使える<br>ブランド運用ルール<br>の設計
+        </h3>
+        <p class="font-bold text-[13px] md:text-[15px] leading-[1.6] mb-4">
+          デザイナー以外でも、ブランドを<br>崩さずに使える仕組みを作ります。
+        </p>
+        <ul class="text-[12px] md:text-[13px] font-bold leading-[1.7] mb-4 space-y-0.5">
+          <li>・企画書、SNS、社内資料のテンプレート</li>
+          <li>・わかりやすいブランドルール設計（禁止事項）</li>
+          <li>・色、フォントの設定（コピペで誰でも使える）</li>
+        </ul>
+        <p class="font-bold text-[13px] md:text-[15px] leading-[1.6]">
+          現場で誰もが&ldquo;迷わない&rdquo;<br>ブランドを実現。
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="border-2 border-black rounded-2xl p-6 md:p-8" data-animate>
+        <h3 class="heading-font font-black text-[19px] md:text-[23px] leading-[1.4] mb-4">
+          混乱しないための<br>以降設計
+        </h3>
+        <p class="font-bold text-[13px] md:text-[15px] leading-[1.6] mb-4">
+          リニューアルで一番多い失敗は<br>「切り替え漏れ」です。
+        </p>
+        <ul class="text-[12px] md:text-[13px] font-bold leading-[1.7] mb-4 space-y-0.5">
+          <li>・全ての制作物の棚卸し</li>
+          <li>・変更スケジュールの設計</li>
+          <li>・ロゴ、素材の整理パッケージ</li>
+        </ul>
+        <p class="font-bold text-[13px] md:text-[15px] leading-[1.6]">
+          &ldquo;いつのまにかバラバラに&rdquo;<br>を防ぎます。
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="border-2 border-black rounded-2xl p-6 md:p-8" data-animate>
+        <h3 class="heading-font font-black text-[19px] md:text-[23px] leading-[1.4] mb-4">
+          社員が前向きになる<br>簡単な仕掛け
+        </h3>
+        <p class="font-bold text-[13px] md:text-[15px] leading-[1.6] mb-4">
+          ブランド変更を「面倒」ではなく<br>「ワクワク」に変えます。
+        </p>
+        <ul class="text-[12px] md:text-[13px] font-bold leading-[1.7] mb-4 space-y-0.5">
+          <li>・ブランドコンセプトシート</li>
+          <li>・PC壁紙、Zoom背景など</li>
+          <li>・ブランドストーリーブック</li>
+        </ul>
+        <p class="font-bold text-[13px] md:text-[15px] leading-[1.6]">
+          社員全員のブランド理解と<br>会社の誇りを育てます。
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ ⑥ 制作の流れ・プロセス ============ -->
+<section class="bg-[#F0F0F0] px-5 md:px-10 py-14 md:py-20">
+  <div class="max-w-[720px] mx-auto text-center">
+    <h2 class="heading-font font-black text-[22px] md:text-[46px] mb-10 md:mb-14" data-animate>
+      いきなり制作は進めません！
+    </h2>
+
+    <div class="mb-10 md:mb-14" data-animate>
+      <p class="font-black text-[14px] md:text-xl mb-4 md:mb-5">課題の整理（何を解決するかの言語化）</p>
+      <p class="text-xl md:text-2xl mb-4 md:mb-5 leading-none">▼</p>
+      <p class="font-black text-[14px] md:text-xl mb-4 md:mb-5">方向性の統一（ムードボードで共有）</p>
+      <p class="text-xl md:text-2xl mb-4 md:mb-5 leading-none">▼</p>
+      <p class="font-black text-[14px] md:text-xl mb-4 md:mb-5">理由の明確化（なぜそのデザインかを説明）</p>
+      <p class="text-xl md:text-2xl mb-4 md:mb-5 leading-none">▼</p>
+      <p class="font-black text-[14px] md:text-xl mb-4 md:mb-5">実用テスト（現場で使えるかを確認）</p>
+      <p class="text-xl md:text-2xl mb-4 md:mb-5 leading-none">▼</p>
+      <p class="font-black text-[14px] md:text-xl">資産化（今後も使えるようなルールにする）</p>
+    </div>
+
+    <a href="#form" class="btn-cta w-full max-w-[420px] mx-auto py-4 md:py-5 text-base md:text-lg" data-animate>無料で相談をする</a>
+  </div>
+</section>
+
+<!-- ============ ⑦ 価値提案 (まとめ) ============ -->
+<section class="bg-white px-5 md:px-10 py-14 md:py-20">
+  <div class="max-w-[640px] mx-auto text-center">
+    <p class="heading-font font-black text-[23px] md:text-[40px] leading-[1.6] tracking-[0.02em]" data-animate>
+      単なるデザインの<br>
+      リニューアルではなく<br>
+      「誰でも使えるブランド」<br>
+      「社内で迷わない仕組み」<br>
+      「長く育つデザイン資産」<br>
+      を一緒に作ります。
+    </p>
+  </div>
+</section>
+
+<!-- ============ ⑧ 最終CTA / フォーム ============ -->
+<section id="form" class="bg-[#F0F0F0] px-5 md:px-10 py-14 md:py-20">
+  <div class="max-w-[640px] mx-auto">
+
+    <div class="bubble tail-left border-[3px] border-black rounded-2xl bg-white px-5 py-4 md:px-10 md:py-7 mb-8 md:mb-10 w-fit max-w-full mx-auto" data-animate>
+      <h2 class="heading-font font-black text-[18px] md:text-[32px] whitespace-nowrap">まずはご相談ください！</h2>
+    </div>
+
+    <div class="flex items-center gap-4 mb-8 md:mb-10" data-animate>
+      <img src="assets/WPG_LP_azuma.png" alt="担当者イラスト" class="w-14 md:w-20 flex-shrink-0">
+      <h3 class="heading-font font-black text-[22px] md:text-[34px]">無料デザイン診断</h3>
+    </div>
+
+    <!--
+      フォーム送信について:
+      送信処理は /api/contact (Vercel Serverless Function) が担当し、Resend経由でメールを送信します。
+      APIキーや送信先アドレスはVercelの環境変数で管理し、本ファイルには直書きしていません。
+      詳細は README.md を参照してください。
+    -->
+    <form id="contact-form" class="space-y-5 md:space-y-6" data-animate>
+      <!-- ボット対策用ハニーポット(人間には見えない/入力されない想定) -->
+      <div class="absolute w-0 h-0 overflow-hidden" aria-hidden="true">
+        <label>ウェブサイト<input type="text" name="_hp" tabindex="-1" autocomplete="off"></label>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-3">
+        <div>
+          <label class="block font-bold text-[13px] md:text-[15px] mb-2">会社名<span class="text-xs md:text-sm">[必須]</span></label>
+          <input type="text" name="company" required class="w-full border-2 border-black rounded-xl px-4 py-3 bg-white font-bold focus:outline-none">
+        </div>
+        <div>
+          <label class="block font-bold text-[13px] md:text-[15px] mb-2">ご担当者様氏名<span class="text-xs md:text-sm">[必須]</span></label>
+          <input type="text" name="fullname" required class="w-full border-2 border-black rounded-xl px-4 py-3 bg-white font-bold focus:outline-none">
+        </div>
+      </div>
+
+      <div>
+        <label class="block font-bold text-[13px] md:text-[15px] mb-2">メールアドレス<span class="text-xs md:text-sm">[必須]</span></label>
+        <input type="email" name="email" required class="w-full border-2 border-black rounded-xl px-4 py-3 bg-white font-bold focus:outline-none">
+      </div>
+
+      <div>
+        <label class="block font-bold text-[13px] md:text-[15px] mb-2">現在のお悩み・ご要望<span class="text-xs md:text-sm">[必須]</span></label>
+        <textarea name="message" required rows="7" placeholder="例）ブランドイメージを一新したい／ブランドのロゴを変えたい&#10;今のブランドをよりかっこいいブランドにしたい" class="w-full border-2 border-black rounded-xl px-4 py-3 bg-white font-bold focus:outline-none placeholder:font-normal placeholder:text-[#6C757D]"></textarea>
+      </div>
+
+      <p id="form-status" class="hidden text-center font-bold text-[13px] md:text-[15px]" role="status" aria-live="polite"></p>
+
+      <button type="submit" id="form-submit-btn" class="btn-cta w-full py-4 md:py-5 text-base md:text-lg">無料で相談をする</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ ⑨ フッター ============ -->
+<footer class="bg-[#828282] text-center py-3 md:py-4">
+  <p class="font-bold text-[11px] md:text-sm text-black">© 2025 WHITE Phat Graphics Co., Ltd. All rights reserved.</p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+</script>
+
+<script>
+  const contactForm = document.getElementById('contact-form');
+  const formStatus = document.getElementById('form-status');
+  const submitBtn = document.getElementById('form-submit-btn');
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const originalLabel = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = '送信中...';
+    formStatus.classList.add('hidden');
+
+    try {
+      const payload = Object.fromEntries(new FormData(contactForm).entries());
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.error || '送信に失敗しました。時間をおいて再度お試しください。');
+      }
+
+      formStatus.textContent = 'お問い合わせを受け付けました。担当者よりご連絡いたします。';
+      formStatus.className = 'text-center font-bold text-[13px] md:text-[15px] text-green-700';
+      contactForm.reset();
+    } catch (err) {
+      formStatus.textContent = err.message || '送信に失敗しました。時間をおいて再度お試しください。';
+      formStatus.className = 'text-center font-bold text-[13px] md:text-[15px] text-red-600';
+    } finally {
+      formStatus.classList.remove('hidden');
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
+    }
+  });
+</script>
+
+</body>
+</html>
