@@ -4,68 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ただの"デザイン変更"で終わらせない ブランド再設計パートナー | WHITE.PHAT.GRAPHICS</title>
-<script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800;900&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --font-heading:'M PLUS Rounded 1c','Noto Sans JP',sans-serif;
-    --font-body:'Noto Sans JP','M PLUS Rounded 1c',sans-serif;
-  }
-  html{scroll-behavior:smooth;}
-  body{font-family:var(--font-body);color:#212529;}
-  .heading-font{font-family:var(--font-heading);}
-
-  /* CTA pill button */
-  .btn-cta{
-    display:flex;align-items:center;justify-content:center;
-    background:#000;color:#fff;border-radius:9999px;
-    font-family:var(--font-heading);font-weight:700;
-    letter-spacing:0.05em;
-    transition:transform .2s ease, opacity .2s ease;
-  }
-  .btn-cta:hover{opacity:.85;transform:translateY(-2px);}
-  .btn-cta:active{opacity:.7;transform:translateY(0);}
-
-  /* Speech bubble with tail */
-  .bubble{position:relative;}
-  .bubble.tail-right::after,
-  .bubble.tail-right::before,
-  .bubble.tail-left::after,
-  .bubble.tail-left::before{
-    content:'';position:absolute;width:0;height:0;
-    border-style:solid;
-  }
-  .bubble.tail-right::after{
-    bottom:-20px;right:15%;
-    border-width:20px 16px 0 16px;
-    border-color:#000 transparent transparent transparent;
-  }
-  .bubble.tail-right::before{
-    bottom:-15px;right:calc(15% + 3px);
-    border-width:16px 13px 0 13px;
-    border-color:#fff transparent transparent transparent;
-    z-index:1;
-  }
-  .bubble.tail-left::after{
-    bottom:-20px;left:12%;
-    border-width:20px 16px 0 16px;
-    border-color:#000 transparent transparent transparent;
-  }
-  .bubble.tail-left::before{
-    bottom:-15px;left:calc(12% + 3px);
-    border-width:16px 13px 0 13px;
-    border-color:#fff transparent transparent transparent;
-    z-index:1;
-  }
-
-  /* Scroll fade-in */
-  [data-animate]{opacity:0;transform:translateY(24px);transition:opacity .6s ease, transform .6s ease;}
-  [data-animate].is-visible{opacity:1;transform:translateY(0);}
-
-  textarea{resize:vertical;}
-</style>
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-white">
 
@@ -75,7 +17,7 @@
   <div class="relative z-10">
     <header class="max-w-[800px] mx-auto flex items-center justify-between px-5 md:px-10 py-4 md:py-6">
       <p class="font-black text-xs md:text-sm tracking-wider heading-font">WHITE.PHAT.GRAPHICS</p>
-      <a href="#form" class="btn-cta text-[11px] md:text-sm px-4 py-2.5 md:px-6 md:py-3">無料で相談をする</a>
+      <a href="#form" class="btn-cta text-[11px] md:text-sm px-4 py-2.5 md:px-6 md:py-3">無料デザイン診断</a>
     </header>
 
     <div class="max-w-[760px] mx-auto px-5 md:px-10 pt-8 pb-14 md:pt-14 md:pb-20 text-center">
@@ -84,8 +26,32 @@
         で終わらせない<br>
         ブランド再設計パートナー
       </h1>
-      <a href="#form" class="btn-cta w-full max-w-[420px] mx-auto py-4 md:py-5 text-base md:text-lg">無料で相談をする</a>
+
+      <!-- 数値バー(実績サマリー) -->
+      <div class="stat-bar mb-8 md:mb-10">
+        <div>
+          <p class="stat-num">30<span>+</span></p>
+          <p class="stat-label">年の実績</p>
+        </div>
+        <div>
+          <p class="stat-num">500<span>+</span></p>
+          <p class="stat-label">プロジェクト</p>
+        </div>
+        <div>
+          <p class="stat-num">100<span>+</span></p>
+          <p class="stat-label">取引先企業</p>
+        </div>
+      </div>
+
+      <a href="#form" class="btn-cta w-full max-w-[420px] mx-auto py-4 md:py-5 text-base md:text-lg">無料デザイン診断</a>
     </div>
+  </div>
+</section>
+
+<!-- ============ ②b ブランドムービー ============ -->
+<section class="bg-white px-5 md:px-10 py-14 md:py-20">
+  <div class="movie-stage" data-animate>
+    <video class="movie-video" src="https://4phat.com/img/home/WPG_site_movie-02.mp4" autoplay muted loop playsinline preload="metadata"></video>
   </div>
 </section>
 
@@ -126,7 +92,7 @@
       ブランドリニューアルを見た目の変更で終わらせず、<br class="hidden md:block">
       社内で使い続けられる仕組みまでを設計します。
     </p>
-    <a href="#form" class="btn-cta w-full max-w-[420px] mx-auto py-4 md:py-5 text-base md:text-lg" data-animate>無料で相談をする</a>
+    <a href="#form" class="btn-cta w-full max-w-[420px] mx-auto py-4 md:py-5 text-base md:text-lg" data-animate>無料デザイン診断</a>
   </div>
 </section>
 
@@ -148,7 +114,7 @@
           デザインは&ldquo;好み&rdquo;ではなく<br>&ldquo;戦略&rdquo;で決めるべきです。
         </p>
         <ul class="text-[12px] md:text-[13px] font-bold leading-[1.7] mb-4 space-y-0.5">
-          <li>・競合比較ビジュアルマップ（違いを見える可）</li>
+          <li>・競合比較ビジュアルマップ（違いを見える化）</li>
           <li>・デザインの意味を説明する資料作成</li>
           <li>・役員向けプレゼン資料（そのまま使える構成）</li>
         </ul>
@@ -178,7 +144,7 @@
       <!-- Card 3 -->
       <div class="border-2 border-black rounded-2xl p-6 md:p-8" data-animate>
         <h3 class="heading-font font-black text-[19px] md:text-[23px] leading-[1.4] mb-4">
-          混乱しないための<br>以降設計
+          混乱しないための<br>移行設計
         </h3>
         <p class="font-bold text-[13px] md:text-[15px] leading-[1.6] mb-4">
           リニューアルで一番多い失敗は<br>「切り替え漏れ」です。
@@ -234,12 +200,68 @@
       <p class="font-black text-[14px] md:text-xl">資産化（今後も使えるようなルールにする）</p>
     </div>
 
-    <a href="#form" class="btn-cta w-full max-w-[420px] mx-auto py-4 md:py-5 text-base md:text-lg" data-animate>無料で相談をする</a>
+    <a href="#form" class="btn-cta w-full max-w-[420px] mx-auto py-4 md:py-5 text-base md:text-lg" data-animate>無料デザイン診断</a>
+  </div>
+</section>
+
+<!-- ============ ⑥b 過去の制作実績 ============ -->
+<section class="bg-white px-5 md:px-10 py-14 md:py-20">
+  <div class="max-w-[820px] mx-auto text-center">
+    <h2 class="heading-font font-black text-[24px] md:text-[40px] mb-2" data-animate>過去の制作実績</h2>
+    <p class="font-bold text-[13px] md:text-base tracking-wider mb-8 md:mb-10" style="color:rgba(0,0,0,0.6);" data-animate>DESIGN WORKS</p>
+
+    <div class="gallery-grid" data-animate>
+      <a href="https://4phat.com/works/logo-character.html" target="_blank" rel="noopener" class="gallery-card">
+        <img src="assets/gallery/gallery-logo-character.jpg" alt="ロゴ・キャラクター制作実績" loading="lazy">
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label"><div class="jp">ロゴ・キャラクター</div><div class="en">LOGO / CHARACTER</div></div>
+      </a>
+      <a href="https://4phat.com/works/ad.html" target="_blank" rel="noopener" class="gallery-card">
+        <img src="assets/gallery/gallery-ad.jpg" alt="広告制作実績" loading="lazy">
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label"><div class="jp">広告</div><div class="en">AD</div></div>
+      </a>
+      <a href="https://4phat.com/works/visual.html" target="_blank" rel="noopener" class="gallery-card">
+        <img src="assets/gallery/gallery-visual.jpg" alt="ビジュアル制作実績" loading="lazy">
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label"><div class="jp">ビジュアル</div><div class="en">VISUAL</div></div>
+      </a>
+      <a href="https://4phat.com/works/sports.html" target="_blank" rel="noopener" class="gallery-card">
+        <img src="assets/gallery/gallery-sports.jpg" alt="スポーツ制作実績" loading="lazy">
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label"><div class="jp">スポーツ</div><div class="en">SPORTS</div></div>
+      </a>
+      <a href="https://4phat.com/works/music.html" target="_blank" rel="noopener" class="gallery-card">
+        <img src="assets/gallery/gallery-music.jpg" alt="音楽制作実績" loading="lazy">
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label"><div class="jp">音楽</div><div class="en">MUSIC</div></div>
+      </a>
+      <a href="https://4phat.com/works/musical.html" target="_blank" rel="noopener" class="gallery-card">
+        <img src="assets/gallery/gallery-stage-musical.jpg" alt="舞台・ミュージカル制作実績" loading="lazy">
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label"><div class="jp">舞台・ミュージカル</div><div class="en">STAGE / MUSICAL</div></div>
+      </a>
+      <a href="https://4phat.com/works/goods.html" target="_blank" rel="noopener" class="gallery-card">
+        <img src="assets/gallery/gallery-goods.jpg" alt="グッズ制作実績" loading="lazy">
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label"><div class="jp">グッズ</div><div class="en">GOODS</div></div>
+      </a>
+      <a href="https://4phat.com/works/costume.html" target="_blank" rel="noopener" class="gallery-card">
+        <img src="assets/gallery/gallery-costume.jpg" alt="衣装制作実績" loading="lazy">
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label"><div class="jp">衣装制作</div><div class="en">COSTUME</div></div>
+      </a>
+      <a href="https://4phat.com/works/other.html" target="_blank" rel="noopener" class="gallery-card">
+        <img src="assets/gallery/gallery-other.jpg" alt="その他制作実績" loading="lazy">
+        <div class="gallery-overlay"></div>
+        <div class="gallery-label"><div class="jp">その他</div><div class="en">OTHER</div></div>
+      </a>
+    </div>
   </div>
 </section>
 
 <!-- ============ ⑦ 価値提案 (まとめ) ============ -->
-<section class="bg-white px-5 md:px-10 py-14 md:py-20">
+<section class="bg-[#F0F0F0] px-5 md:px-10 py-14 md:py-20">
   <div class="max-w-[640px] mx-auto text-center">
     <p class="heading-font font-black text-[23px] md:text-[40px] leading-[1.6] tracking-[0.02em]" data-animate>
       単なるデザインの<br>
@@ -252,6 +274,21 @@
   </div>
 </section>
 
+<!-- ============ ⑦b 会社の信頼情報 ============ -->
+<section class="bg-white px-5 md:px-10 py-14 md:py-20">
+  <div class="max-w-[720px] mx-auto text-center">
+    <h2 class="heading-font trust-heading font-black text-[22px] md:text-[36px] leading-[1.5] mb-6 md:mb-8" data-animate>
+      1995年から、<br class="md:hidden">ブランドの「格」を設計してきました
+    </h2>
+    <p class="font-bold text-[13px] md:text-[15px] leading-[1.8]" data-animate>
+      30年にわたり、大手企業のブランドビジュアルから<br class="hidden md:block">
+      エンタメ・スポーツ領域のトータルデザインまでを手がけてきました。<br><br>
+      見た目を整えるだけでなく、社内で使われ続ける仕組みまで設計する。<br class="hidden md:block">
+      それが私たちの考えるブランド再設計です。
+    </p>
+  </div>
+</section>
+
 <!-- ============ ⑧ 最終CTA / フォーム ============ -->
 <section id="form" class="bg-[#F0F0F0] px-5 md:px-10 py-14 md:py-20">
   <div class="max-w-[640px] mx-auto">
@@ -260,23 +297,24 @@
       <h2 class="heading-font font-black text-[18px] md:text-[32px] whitespace-nowrap">まずはご相談ください！</h2>
     </div>
 
-    <div class="flex items-center gap-4 mb-8 md:mb-10" data-animate>
+    <div class="flex items-center gap-4 mb-6" data-animate>
       <img src="assets/WPG_LP_azuma.png" alt="担当者イラスト" class="w-14 md:w-20 flex-shrink-0">
       <h3 class="heading-font font-black text-[22px] md:text-[34px]">無料デザイン診断</h3>
     </div>
+
+    <p class="diagnosis-lead text-center text-[13px] md:text-[15px] leading-[1.8] mb-8 md:mb-10" data-animate>
+      現在のブランド運用の課題を伺い、<br class="hidden md:block">
+      改善の方向性を代表が直接ご提案します。<br>
+      売り込みは一切ありません。
+    </p>
 
     <!--
       フォーム送信について:
       送信処理は /api/contact (Vercel Serverless Function) が担当し、Resend経由でメールを送信します。
       APIキーや送信先アドレスはVercelの環境変数で管理し、本ファイルには直書きしていません。
-      詳細は README.md を参照してください。
+      送信成功時は /thanks へ遷移します(Google広告のコンバージョン計測ポイント)。
     -->
     <form id="contact-form" class="space-y-5 md:space-y-6" data-animate>
-      <!-- ボット対策用ハニーポット(人間には見えない/入力されない想定) -->
-      <div class="absolute w-0 h-0 overflow-hidden" aria-hidden="true">
-        <label>ウェブサイト<input type="text" name="_hp" tabindex="-1" autocomplete="off"></label>
-      </div>
-
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-3">
         <div>
           <label class="block font-bold text-[13px] md:text-[15px] mb-2">会社名<span class="text-xs md:text-sm">[必須]</span></label>
@@ -300,14 +338,44 @@
 
       <p id="form-status" class="hidden text-center font-bold text-[13px] md:text-[15px]" role="status" aria-live="polite"></p>
 
-      <button type="submit" id="form-submit-btn" class="btn-cta w-full py-4 md:py-5 text-base md:text-lg">無料で相談をする</button>
+      <button type="submit" id="form-submit-btn" class="btn-cta w-full py-4 md:py-5 text-base md:text-lg">無料デザイン診断</button>
+
+      <p class="form-privacy-note">
+        送信をもって、<a href="/privacy" target="_blank" rel="noopener">プライバシーポリシー</a>に同意いただいたものとみなします
+      </p>
     </form>
+
+    <!-- 3点保証 -->
+    <div class="guarantee-list" data-animate>
+      <p class="guarantee-item"><span class="guarantee-check" aria-hidden="true">✓</span>翌営業日までに返信</p>
+      <p class="guarantee-item"><span class="guarantee-check" aria-hidden="true">✓</span>お見積り無料</p>
+      <p class="guarantee-item"><span class="guarantee-check" aria-hidden="true">✓</span>秘密厳守</p>
+    </div>
+
+    <div class="text-center mt-8 md:mt-10" data-animate>
+      <p class="font-bold text-[13px] md:text-[15px] mb-2">お急ぎの方はお電話にてご相談いただけます</p>
+      <p class="thanks-tel text-2xl md:text-3xl">
+        <span class="tel-badge">TEL</span>03-5467-6877
+      </p>
+    </div>
   </div>
 </section>
 
 <!-- ============ ⑨ フッター ============ -->
-<footer class="bg-[#828282] text-center py-3 md:py-4">
-  <p class="font-bold text-[11px] md:text-sm text-black">© 2025 WHITE Phat Graphics Co., Ltd. All rights reserved.</p>
+<footer class="bg-[#828282] px-5 py-10 md:py-12">
+  <div class="max-w-[720px] mx-auto text-center">
+    <nav class="footer-nav">
+      <a href="/privacy">プライバシーポリシー</a>
+      <a href="https://4phat.com/#company" target="_blank" rel="noopener">会社概要</a>
+      <a href="https://4phat.com/contact" target="_blank" rel="noopener">お問い合わせ</a>
+    </nav>
+    <div class="footer-company">
+      <p>有限会社ホワイト.ファット.グラフィックス</p>
+      <p class="footer-company-en">WHITE Phat Graphics Co., Ltd.</p>
+      <p>TEL 03-5467-6877</p>
+    </div>
+    <p class="font-bold text-[11px] md:text-sm text-black">© 2025 WHITE Phat Graphics Co., Ltd. All rights reserved.</p>
+  </div>
 </footer>
 
 <script>
@@ -348,13 +416,11 @@
         throw new Error(data.error || '送信に失敗しました。時間をおいて再度お試しください。');
       }
 
-      formStatus.textContent = 'お問い合わせを受け付けました。担当者よりご連絡いたします。';
-      formStatus.className = 'text-center font-bold text-[13px] md:text-[15px] text-green-700';
-      contactForm.reset();
+      // 送信成功 → サンクスページへ遷移(Google広告のコンバージョン計測ポイント)
+      window.location.href = '/thanks';
     } catch (err) {
       formStatus.textContent = err.message || '送信に失敗しました。時間をおいて再度お試しください。';
       formStatus.className = 'text-center font-bold text-[13px] md:text-[15px] text-red-600';
-    } finally {
       formStatus.classList.remove('hidden');
       submitBtn.disabled = false;
       submitBtn.textContent = originalLabel;

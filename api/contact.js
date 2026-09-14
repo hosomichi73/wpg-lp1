@@ -13,12 +13,7 @@ module.exports = async (req, res) => {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
-  const { company, fullname, email, message, _hp } = req.body || {};
-
-  // ハニーポット: ボットが入力しがちな隠しフィールド。人間には送信されない想定。
-  if (_hp) {
-    return res.status(200).json({ success: true });
-  }
+  const { company, fullname, email, message } = req.body || {};
 
   if (!company || !fullname || !email || !message) {
     return res.status(400).json({ error: '必須項目が入力されていません。' });
